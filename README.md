@@ -29,7 +29,7 @@
 
 **建议：**
 - 图片命名不可包含空格，中英文之间用“-”连接
-- 图片引用根目录为 `https://raw.githubusercontent.com/GourdErwa/review-notes-dev/master/$MODULE/_images/` 
+- 图片引用根目录为 `https://raw.githubusercontent.com/$YOU-GITHUB/review-notes-dev/$MODULE/_images/` 
 - 文章内容以二级标题为目录大纲（一级标题与文件名一致，可忽略不写）
 - 内容排版参考 [排版指南](https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.zh-CN.md)
 - 使用排版工具 [Text-Typesetting](https://github.com/CyC2018/Text-Typesetting) 进行排版优化
