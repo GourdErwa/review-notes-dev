@@ -2,14 +2,19 @@
 module.exports = {
     '/language/java-concurrency/': [
         {
-            title: "内存模型-基础",
+            title: "内存模型-基础概念",
             collapsable: true,
             sidebarDepth: 2,
             children: [
                 ['内存模型-基础概念', '基础概念'],
                 ['内存模型-顺序一致性', '顺序一致性'],
+                ['内存模型-CAS实现原理', 'CAS实现原理'],
+                ['内存模型-原子操作', '原子操作'],
                 ['内存模型-final域的内存语义', 'final域的内存语义'],
-                ['内存模型-volatile', 'volatile']
+                ['内存模型-volatile', 'volatile'],
+                ['内存模型-synchronized', 'synchronized'],
+                ['内存模型-锁的内存语义', '锁的内存语义'],
+                ['内存模型-锁类型总结', '锁类型总结'],
             ]
         }
     ],

@@ -1,3 +1,4 @@
+> 专栏原创出处：[源笔记文件 ](https://github.com/GourdErwa/review-notes/tree/master/language/java-concurrency) ，[源码 ](https://github.com/GourdErwa/java-advanced/tree/master/java-concurrency)，转载请附上原文出处链接和本声明。
 
 [[toc]]  
 ## volatile 的特性
@@ -124,7 +125,9 @@ volatile 读插入内存屏障后生成的指令序列示意图如下：
 在 JSR-133 之前的旧 Java 内存模型中，虽然不允许 volatile 变量之间重排序，但旧的 Java 内存模型允许 volatile 变量与普通变量重排序。
 在旧的内存模型中，VolatileExample 示例程序可能 被重排序成下列时序来执行
 
--- 图 3-23 线程执行时序图
+<div align="center">
+    <img src="https://blog-review-notes.oss-cn-beijing.aliyuncs.com/language/java-concurrency/_images/volatile-线程执行时序图.png" width="550px">
+</div>
 
 在旧的内存模型中，当 1 和 2 之间没有数据依赖关系时，1 和 2 之间就可能被重排序（3 和 4 类似）。   
 **其结果就是**：读线程 B 执行 4 时，不一定能看到写线程 A 在执行 1 时对共享变量的修改。
@@ -222,7 +225,7 @@ public class CheesyCounter {
 ```
 ## 总结
 
-自我提问：
+巩固提问：
 - volatile 关键字的作用、原理
 - 什么时候选择用 volatile
 
