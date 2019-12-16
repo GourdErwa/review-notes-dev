@@ -2,12 +2,12 @@ const myNav = require("./my-nav.js");
 const mySidebar = require("./my-sidebar");
 
 module.exports = {
-    title: '复盘笔记开发（review-notes-dev）',
+    title: '复盘笔记预发布环境（不可作为正式学习环境）',
     description: 'review notes',
     // base: '/review-notes/',
     markdown: {
         lineNumbers: false, // 代码块显示行号
-        toc: {includeLevel: [2, 3, 4]}
+        toc: {includeLevel: [2, 3]}
     },
     themeConfig: {
         displayAllHeaders: false, // 当前活动页面的标题

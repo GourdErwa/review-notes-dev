@@ -4,7 +4,7 @@ module.exports = {
         {
             title: "内存模型-基础概念",
             collapsable: true,
-            sidebarDepth: 2,
+            sidebarDepth: 1,
             children: [
                 ['内存模型-基础概念', '基础概念'],
                 ['内存模型-顺序一致性', '顺序一致性'],
@@ -22,7 +22,7 @@ module.exports = {
         {
             title: "Flink 基础概念",
             collapsable: true,
-            sidebarDepth: 2,
+            sidebarDepth: 1,
             children: [
                 ['基础概念', '基础概念'],
                 ['运行环境', '运行环境'],
@@ -36,7 +36,7 @@ module.exports = {
         {
             title: "DataSet（Batch）",
             collapsable: true,
-            sidebarDepth: 2,
+            sidebarDepth: 1,
             children: [
                 ['DataSet概览', 'DataSet概览'],
                 ['DataSet分配唯一标识符', 'DataSet分配唯一标识符'],
@@ -48,7 +48,7 @@ module.exports = {
         }, {
             title: "DataStream（Streaming）",
             collapsable: true,
-            sidebarDepth: 2,
+            sidebarDepth: 1,
             children: [
                 ['DataStream概览', 'DataStream概览'],
                 ['DataStream时间水印机制', 'DataStream时间水印机制'],
