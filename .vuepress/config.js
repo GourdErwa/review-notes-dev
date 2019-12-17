@@ -34,7 +34,9 @@ module.exports = {
         // 默认为 "Edit this page"
         editLinkText: '帮助我们改善此页面'
     },
-    plugins: ['@vuepress/nprogress','@vuepress/medium-zoom',
+    plugins: [
+        '@vuepress/nprogress',
+        '@vuepress/medium-zoom',
         '@vuepress/back-to-top',
         '@vuepress/active-header-links', {
             sidebarLinkSelector: '.sidebar-link',
@@ -45,6 +47,16 @@ module.exports = {
             {
                 'ga': 'UA-154222368-2' // UA-00000000-0
             }
-        ]]
+        ],
+        [   // https://vuepress.github.io/zh/plugins/git-log/#vuepress-plugin-git-log
+            // 在你的 VuePress 页面信息中集成 git 日志。
+            'vuepress-plugin-git-log',
+            {
+                additionalArgs: '--no-merge',
+                onlyFirstAndLastCommit: true,
+            },
+        ],
+        'vuepress-plugin-baidu-autopush' // 百度站点自动推送
+    ]
 }
 ;
