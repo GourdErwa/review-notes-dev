@@ -24,6 +24,7 @@
     
 ## 贡献说明
 **贡献流程：**
+- 提交贡献申请
 - Fork [review-notes-dev](https://github.com/GourdErwa/review-notes-dev) 后在本地拉取分支进行开发
 - 开发文章文件格式： Markdown [语法格式 ](https://guides.github.com/features/mastering-markdown/)
 - 专栏笔记目录结构
@@ -38,7 +39,7 @@
 
 - 专栏完成后提交 PR
 - 贡献者审核校验
-- 贡献成员反复推敲后正式发布
+- 贡献成员反复校验审核后正式发布
 ***
 **建议：**
 - 图片命名不可包含空格，中英文之间用“-”连接
