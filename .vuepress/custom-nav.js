@@ -19,6 +19,12 @@ module.exports = [
         items: [
             {text: '数据结构', link: '/algorithm/data-structures/'}
         ]
+    },
+    {
+        text: '关于',
+        items: [
+            {text: '关于学习方法', link: '/about/关于学习方法.md'}
+        ]
     }
 ]
 ;
