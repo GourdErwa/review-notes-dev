@@ -1,6 +1,5 @@
->专栏原创出处：[源笔记文件 ](https://github.com/GourdErwa/review-notes/tree/master/language/java-concurrency) ，[源码 ](https://github.com/GourdErwa/java-advanced/tree/master/java-concurrency)，转载请附上原文出处链接和本声明。
+> 专栏原创出处：[源笔记文件 ](https://github.com/GourdErwa/review-notes/tree/master/language/java-concurrency) ，[源码 ](https://github.com/GourdErwa/java-advanced/tree/master/java-concurrency)，转载请附上原文出处链接和本声明。
 
-[在线阅读](https://gourderwa.github.io/review-notes/#/language/java-concurrency/)
 
 ## 参考
 - 《Java并发编程的艺术》
