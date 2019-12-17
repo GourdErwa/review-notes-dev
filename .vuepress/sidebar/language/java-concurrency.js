@@ -1,5 +1,4 @@
 module.exports = [
-    ['README', '导言'],
     {
         title: "并发编程-基础概念",
         collapsable: true,
