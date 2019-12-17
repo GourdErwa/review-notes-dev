@@ -1,5 +1,5 @@
-const myNav = require("./my-nav.js");
-const mySidebar = require("./my-sidebar");
+const myNav = require("./custom-nav.js");
+const mySidebar = require("./sidebar/custom-sidebar");
 
 module.exports = {
     title: '复盘笔记预发布环境（不可作为正式学习环境）',
