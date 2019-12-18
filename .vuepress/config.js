@@ -2,7 +2,7 @@ const myNav = require("./custom-nav.js");
 const mySidebar = require("./sidebar/custom-sidebar");
 
 module.exports = {
-    title: '复盘笔记预发布环境（不可作为正式学习环境）',
+    title: '复盘笔记-预发布环境',
     description: 'review notes',
     // base: '/review-notes/',
     markdown: {
@@ -56,6 +56,7 @@ module.exports = {
                 onlyFirstAndLastCommit: true,
             },
         ],
+        ['vuepress-plugin-code-copy', true], // 代码复制
         'vuepress-plugin-baidu-autopush' // 百度站点自动推送
     ]
 }
