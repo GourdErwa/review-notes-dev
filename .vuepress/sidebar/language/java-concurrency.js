@@ -1,6 +1,6 @@
 module.exports = [
     {
-        title: "并发编程-基础概念",
+        title: "并发编程-基础篇",
         collapsable: false,
         sidebarDepth: 1,
         children: [
@@ -18,7 +18,7 @@ module.exports = [
         ]
     },
     {
-        title: "并发编程-线程",
+        title: "并发编程-线程篇",
         collapsable: false,
         sidebarDepth: 1,
         children: [
