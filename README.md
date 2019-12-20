@@ -23,7 +23,7 @@
     * [Git（In review） ](/devops/git/)
         
 ## 如何贡献
-参考 [贡献说明 ](/about/贡献说明.md)
+欢迎投稿、贡献。参考 [贡献说明 ](/about/贡献说明.md)
 
 ### 贡献者
 - [liming199323-Z.liming](https://github.com/liming199323)
