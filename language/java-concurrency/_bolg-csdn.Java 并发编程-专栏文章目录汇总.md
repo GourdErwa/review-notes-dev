@@ -15,12 +15,12 @@ Java 并发编程目录归档
 - [Java 原子操作类（atomic包）](https://gourderwa.blog.csdn.net/article/details/103655219)
 
 ## 并发编程-锁篇
-- Java 锁 Lock 接口简介（未完成）
+- Java 锁-Lock接口简介（未完成）
 - Java 锁-队列同步器实现分析（AQS）（未完成）
 - Java 锁-重入锁（ReentrantLock）（未完成）
-- Java 锁-读写锁（ReentrantLock）（未完成）
+- Java 锁-读写锁（ReentrantReadWriteLock）（未完成）
 - Java 锁-读写锁（StampedLock）（未完成）
-- Java 锁工具类（LockSupport）（未完成）
+- Java 锁相关工具类（LockSupport）（未完成）
 - Java 锁等待通知机制（Condition）（未完成）
 - [Java 锁-死锁问题及解决方案 ](https://gourderwa.blog.csdn.net/article/details/103590991)
 - [Java 锁类型总结 ](https://gourderwa.blog.csdn.net/article/details/103590994)

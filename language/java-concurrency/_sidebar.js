@@ -1,6 +1,6 @@
 module.exports = [
     {
-        title: "并发编程-基础篇",
+        title: "并发编程-基础",
         collapsable: false,
         sidebarDepth: 1,
         children: [
@@ -13,13 +13,22 @@ module.exports = [
             ['并发关键字-synchronized', '并发关键字-synchronized'],
             ['锁的内存语义', '锁的内存语义'],
             ['并发同步、锁定机制比较', '并发同步、锁定机制比较'],
-            ['锁-死锁问题及解决方案', '死锁问题及解决方案'],
-            ['锁类型总结', '锁类型总结'],
-            ['原子操作类（atomic包）','原子操作类（atomic包）']
+            ['原子操作类（atomic包）', '原子操作类（atomic包）']
         ]
     },
     {
-        title: "并发编程-线程篇",
+        title: "并发编程-锁",
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+            ['锁-Lock接口简介', '锁-Lock接口简介'],
+            ['锁-队列同步器实现分析（AQS）', '锁-队列同步器实现分析（AQS）'],
+            ['锁-死锁问题及解决方案', '锁-死锁问题及解决方案'],
+            ['锁类型总结', '锁类型总结']
+        ]
+    },
+    {
+        title: "并发编程-线程",
         collapsable: false,
         sidebarDepth: 1,
         children: [

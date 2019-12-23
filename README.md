@@ -12,7 +12,7 @@
 - 编程语言 
     * [Java 并发编程（In review，30%） ](/language/java-concurrency/)
     * [Java 虚拟机（JVM)（In review） ](/language/java-jvm/)
-    * [Scala 基础-语言核心特性（Checking） ](/language/scala-lang-tour/)
+    * [Scala 基础（Checking） ](/language/scala-basis/)
 - 技术框架
     * [Flink 基础（In review） ](/framework/flink-basis/)
     * [Redis（In review） ](/framework/redis/)
@@ -27,7 +27,7 @@
 
 ### 贡献者
 - [liming199323-Z.liming](https://github.com/liming199323)
-    * [In review]   [Scala 基础-语言核心特性 ](/language/scala-lang-tour/)
+    * [In review]   [Scala 基础-语言核心特性 ](/language/scala-basis/)
 - [VVvista-W.tingting](https://github.com/VVvista) 
     * [In review]   [数据结构 ](/algorithm/data-structures/)
 - [yssmars-Y.shuaishuai](https://github.com/yssmars) 

@@ -6,7 +6,7 @@ module.exports = [
             // {text: 'Java 基础知识', link: '/language/java-basis/'},
             {text: 'Java 并发编程', link: '/language/java-concurrency/'},
             {text: 'Java 虚拟机（JVM）', link: '/language/java-jvm/'},
-            {text: 'Scala 基础-语言核心特性', link: '/language/scala-lang-tour/'}
+            {text: 'Scala 基础', link: '/language/scala-basis/'}
         ]
     },
     {
