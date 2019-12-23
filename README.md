@@ -10,7 +10,7 @@
 
 ## 内容列表
 - 编程语言 
-    * [Java 并发编程（In review，30%） ](/language/java-concurrency/)
+    * [Java 并发编程（In review，50%） ](/language/java-concurrency/)
     * [Java 虚拟机（JVM)（In review） ](/language/java-jvm/)
     * [Scala 基础（Checking） ](/language/scala-basis/)
 - 技术框架

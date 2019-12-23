@@ -4,6 +4,7 @@ module.exports = [
         collapsable: false,
         sidebarDepth: 1,
         children: [
+            ["Scala-语言特征概述", "Scala-语言特征概述"],
             ["基础知识", "基础知识"],
             ['统一类型', '统一类型'],
             ['类', '类'],
