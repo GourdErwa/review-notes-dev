@@ -2,7 +2,6 @@
 
 [[toc]]
 ## 为什么要设计 Lock 接口
-
 锁是用来控制多个线程访问共享资源的方式，一般来说，一个锁能够防止多个线程同时访问共享资源 (但是有些锁可以允许多个线程并发的访问共享资源，比如读写锁)。
 
 在 Lock 接口出现之前，Java 程序是靠 synchronized 关键字实现锁功能的，而 Java SE 5 之后，并发包中新增了 Lock 接口 (以及相关实现类) 用来实现锁功能，它提供了与 synchronized 关键字类似的同步功能，
@@ -63,14 +62,15 @@ public interface Lock {
     <img src="https://blog-review-notes.oss-cn-beijing.aliyuncs.com/language/java-concurrency/_images/类图关系-Lock.png">
 </div>
 
+图例：
 - +红色线表示内部类
 - 绿色虚线表示接口实现关系
 - 蓝色实线表示类继承关系
 
-
+***
 Lock 接口的实现类主要有：
 - 重入锁（ReentrantLock）
 - 读锁（ReadLock）
 - 写锁（WriteLock）
 
-Lock 接口的实现基本都是通过聚合了一个同步器（AbstractQueuedSynchronizer 缩写为 AQS）的子类来完成线程访问控制的。并发编程-锁里面我们逐个分析上图中的内容。
+Lock 接口的实现基本都是通过聚合了一个同步器（AbstractQueuedSynchronizer 缩写为 AQS）的子类来完成线程访问控制的。《并发编程-锁》中我们逐个分析上图中的内容。

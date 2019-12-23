@@ -22,7 +22,8 @@ module.exports = [
         sidebarDepth: 1,
         children: [
             ['锁-Lock接口简介', '锁-Lock接口简介'],
-            ['锁-队列同步器实现分析（AQS）', '锁-队列同步器实现分析（AQS）'],
+            ['锁-AbstractQueuedSynchronizer介绍', '锁-AbstractQueuedSynchronizer介绍'],
+            ['锁-AbstractQueuedSynchronizer原理', '锁-AbstractQueuedSynchronizer原理'],
             ['锁-死锁问题及解决方案', '锁-死锁问题及解决方案'],
             ['锁类型总结', '锁类型总结']
         ]

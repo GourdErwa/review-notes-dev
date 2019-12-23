@@ -15,8 +15,9 @@ Java 并发编程目录归档
 - [Java 原子操作类（atomic包）](https://gourderwa.blog.csdn.net/article/details/103655219)
 
 ## 并发编程-锁篇
-- Java 锁-Lock接口简介（未完成）
-- Java 锁-队列同步器实现分析（AQS）（未完成）
+- [Java 锁-Lock接口简介](https://gourderwa.blog.csdn.net/article/details/103670992)
+- [Java 锁-AbstractQueuedSynchronizer介绍](https://gourderwa.blog.csdn.net/article/details/103671031)
+- Java 锁-AbstractQueuedSynchronizer原理（未完成）
 - Java 锁-重入锁（ReentrantLock）（未完成）
 - Java 锁-读写锁（ReentrantReadWriteLock）（未完成）
 - Java 锁-读写锁（StampedLock）（未完成）
