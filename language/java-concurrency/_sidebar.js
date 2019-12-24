@@ -24,6 +24,7 @@ module.exports = [
             ['锁-Lock接口简介', '锁-Lock接口简介'],
             ['锁-AbstractQueuedSynchronizer介绍', '锁-AbstractQueuedSynchronizer介绍'],
             ['锁-AbstractQueuedSynchronizer原理', '锁-AbstractQueuedSynchronizer原理'],
+            ['锁-重入锁（ReentrantLock）', '锁-重入锁（ReentrantLock）'],
             ['锁-死锁问题及解决方案', '锁-死锁问题及解决方案'],
             ['锁类型总结', '锁类型总结']
         ]
