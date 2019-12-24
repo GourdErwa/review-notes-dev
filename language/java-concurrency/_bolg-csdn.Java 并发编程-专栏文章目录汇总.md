@@ -36,8 +36,8 @@ Java 并发编程目录归档
 - Java 并发工具类-CyclicBarrier（未完成）
 
 ## 并发编程-线程篇
-- [Java 线程简介 ](https://gourderwa.blog.csdn.net/article/details/103619448)  
-- [Java 线程等待通知机制（wait、notify）](https://gourderwa.blog.csdn.net/article/details/103619528)
+- [Java 线程简介 ](https://gourderwa.blog.csdn.net/article/details/103619448)
+- [Java 线程等待通知机制（wait）](https://gourderwa.blog.csdn.net/article/details/103619528)
 - [Java 线程关键类-ThreadLocal](https://gourderwa.blog.csdn.net/article/details/103636811)
 - [Java 线程池简介 ](https://gourderwa.blog.csdn.net/article/details/103636830)
 - [Java 线程池-Executor 框架 ](https://gourderwa.blog.csdn.net/article/details/103653384)

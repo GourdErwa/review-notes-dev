@@ -25,6 +25,7 @@ module.exports = [
             ['锁-AbstractQueuedSynchronizer介绍', '锁-AbstractQueuedSynchronizer介绍'],
             ['锁-AbstractQueuedSynchronizer原理', '锁-AbstractQueuedSynchronizer原理'],
             ['锁-重入锁（ReentrantLock）', '锁-重入锁（ReentrantLock）'],
+            ['锁-读写锁（ReentrantReadWriteLock）', '锁-读写锁（ReentrantReadWriteLock）'],
             ['锁-死锁问题及解决方案', '锁-死锁问题及解决方案'],
             ['锁类型总结', '锁类型总结']
         ]
@@ -35,40 +36,10 @@ module.exports = [
         sidebarDepth: 1,
         children: [
             ['线程简介', '线程简介'],
-            ['线程等待通知机制', '线程等待通知机制'],
+            ['线程等待通知机制（wait）', '线程等待通知机制（wait）'],
             ['线程关键类-ThreadLocal', '线程关键类-ThreadLocal'],
             ['线程池简介', '线程池简介'],
             ['线程池-Executor框架', '线程池-Executor框架']
         ]
     }
-    // {
-    //     title: "并发编程-线程",
-    //     collapsable: true,
-    //     sidebarDepth: 1,
-    //     children: [
-    //         ['并发关键类-atomic原子类', 'atomic原子类'],
-    //         ['并发关键类-AbstractQueuedSynchronizer', 'AbstractQueuedSynchronizer'],
-    //         ['并发关键类-ReentrantLock', 'ReentrantLock'],
-    //         ['并发关键类-ReentrantReadWriteLock', 'ReentrantReadWriteLock'],
-    //         ['并发关键类-StampedLock', 'StampedLock'],
-    //         ['并发关键类-Condition', 'Condition'],
-    //         ['并发关键类-CountDownLatch', 'CountDownLatch'],
-    //         ['并发关键类-CyclicBarrier', 'CyclicBarrier']
-    //     ]
-    // },
-    // {
-    //     title: "并发编程-关键类分析",
-    //     collapsable: true,
-    //     sidebarDepth: 1,
-    //     children: [
-    //         ['并发关键类-atomic原子类', 'atomic原子类'],
-    //         ['并发关键类-AbstractQueuedSynchronizer', 'AbstractQueuedSynchronizer'],
-    //         ['并发关键类-ReentrantLock', 'ReentrantLock'],
-    //         ['并发关键类-ReentrantReadWriteLock', 'ReentrantReadWriteLock'],
-    //         ['并发关键类-StampedLock', 'StampedLock'],
-    //         ['并发关键类-Condition', 'Condition'],
-    //         ['并发关键类-CountDownLatch', 'CountDownLatch'],
-    //         ['并发关键类-CyclicBarrier', 'CyclicBarrier']
-    //     ]
-    // }
 ];
