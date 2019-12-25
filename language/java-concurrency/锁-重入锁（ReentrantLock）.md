@@ -1,5 +1,7 @@
 > 专栏原创出处：[github-源笔记文件 ](https://github.com/GourdErwa/review-notes/tree/master/language/java-concurrency) ，[github-源码 ](https://github.com/GourdErwa/java-advanced/tree/master/java-concurrency)，欢迎 Star，转载请附上原文出处链接和本声明。
 
+Java 并发编程专栏系列笔记，系统性学习可访问个人复盘笔记-技术博客 [Java 并发编程](https://review-notes.top/language/java-concurrency/)
+
 [[toc]]
 ## 重入锁-ReentrantLock
 重入锁 ReentrantLock，就是支持重进入的锁，它表示该锁能够支持一个线程对资源的重复加锁（排他锁）。除此之外，该锁的还支持获取锁时的公平和非公平性选择。
@@ -65,7 +67,7 @@ public class ReentrantLockExample {
 - 非公平性锁虽然可能造成线程“饥饿”，但极少的线程切换，保证了其更大的吞吐量。
 
 ## 使用场景
-> 如果在 synchronized 关键字不能满足的需求上我们考虑使用 Lock，相关比较参考或者回忆文章《并发同步、锁定机制比较》内容
+> 如果在 synchronized 关键字不能满足的需求上我们考虑使用 Lock，相关比较参考或者回忆文章《并发操作比较（CAS、volatile、synchronized、Lock）》内容
 
 此处直接简要对比 synchronized 、ReentrantLock 即可分析使用场景。
 
@@ -81,3 +83,5 @@ public class ReentrantLockExample {
 - 锁状态感知
     - synchronized：无法判断是否拿到锁
     - ReentrantLock：可以判断是否拿到锁
+
+> 比如一个需要并发的类有多个加锁的方法，方法直接互相调用，如果非重入锁，那每次调用时都需要竞争锁

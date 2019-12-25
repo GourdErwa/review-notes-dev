@@ -1,5 +1,7 @@
 > 专栏原创出处：[github-源笔记文件 ](https://github.com/GourdErwa/review-notes/tree/master/language/java-concurrency) ，[github-源码 ](https://github.com/GourdErwa/java-advanced/tree/master/java-concurrency)，欢迎 Star，转载请附上原文出处链接和本声明。
 
+Java 并发编程专栏系列笔记，系统性学习可访问个人复盘笔记-技术博客 [Java 并发编程](https://review-notes.top/language/java-concurrency/)
+
 [[toc]]
 ## 为什么要设计 Lock 接口
 锁是用来控制多个线程访问共享资源的方式，一般来说，一个锁能够防止多个线程同时访问共享资源 (但是有些锁可以允许多个线程并发的访问共享资源，比如读写锁)。
@@ -12,7 +14,7 @@
 
 例如，针对一个场景，手把手进行锁获取和释放，先获得锁 A，然后再获取锁 B，当锁 B 获得后，释放锁 A 同时获取锁 C，当锁 C 获得后，再释放 B 同时获取锁 D，以此类推。这种场景下，synchronized 关键字就不那么容易实现了，而使用 Lock 却容易许多。
 
-> 有关并发关键字及锁的比较参考前面文章《并发同步、锁定机制比较》，有关锁的内存语义参考前面文章《锁的内存语义》
+> 有关并发关键字及锁的比较参考前面文章《并发操作比较（CAS、volatile、synchronized、Lock）》，有关锁的内存语义参考前面文章《锁的内存语义》
 
 ## 如何使用 Lock
 - 不要将获取锁的过程写在 try 块中，因为如果在获取锁 (自定义锁的实现) 时发生了异常，异常抛出的同时，也会导致锁无故释放。
