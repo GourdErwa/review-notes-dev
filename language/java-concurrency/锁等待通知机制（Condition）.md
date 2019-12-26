@@ -152,6 +152,7 @@ Condition 拥有首尾节点的引用，而新增节点只需要将原有的尾�
     - 多个 Condition 条件可以互相配合执行，我们把每个条件抽象为一个等待队列，这些等待队列什么时候加入同步队列是由其他的条件决定的。
     - e.g. 生产和消费是两个条件，生产力过剩时，生产需要等待，生产完成后通知消费者继续消费。消费品为空时，消费需要等待，消费完成后通知生产者继续生产。
 
+- [Condition/ReentrantLock 实现的多生产者消费者](https://github.com/GourdErwa/java-advanced/blob/master/java-concurrency/src/main/java/io/gourd/java/concurrency/app/pc/ConditionReentrantLock.java)
 ## 参考
 - 有关线程等待操作相关操作区别，参考本专栏《线程等待操作（sleep、wait、park、Condition）区别》
 - 并发编程的艺术
