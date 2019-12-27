@@ -3,7 +3,7 @@ module.exports = [
     {
         text: '编程语言',
         items: [
-            // {text: 'Java 基础知识', link: '/language/java-basis/'},
+            {text: 'Java 谜题', link: '/language/java-puzzle/'},
             {text: 'Java 并发编程', link: '/language/java-concurrency/'},
             {text: 'Java 虚拟机（JVM）', link: '/language/java-jvm/'},
             {text: 'Scala 基础', link: '/language/scala-basis/'}
