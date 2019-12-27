@@ -12,7 +12,7 @@ ConcurrentLinkedQueue 是一个基于链接节点的无界线程安全队列，�
 - 当我们添加一个元素的时候，它会添加到队列的尾部
 - 当我们获取一个元素时，它会返回队列头部的元素。
 
-## ConcurrentLinkedQueue 内部数据结构
+## ConcurrentLinkedQueue 结构
 ConcurrentLinkedQueue 由 head 节点和 tail 节点组成，每个节点 (Node) 由节点元素 (item) 和指向下一个节点 (next) 的引用组成，节点与节点之间就是通过这个 next 关联起来，从而组成一 张链表结构的队列。默认情况下 head 节点存储的元素为空，tail 节点等于 head 节点。
 
 ```java
@@ -25,7 +25,7 @@ ConcurrentLinkedQueue 由 head 节点和 tail 节点组成，每个节点 (Node)
     }
 ```
 
-## ConcurrentLinkedQueue 入队操作解析
+## ConcurrentLinkedQueue 入队解析
 由于 ConcurrentLinkedQueue 是无界的，所以 offer 永远返回 true
 ```java
     public boolean offer(E e) {
@@ -63,7 +63,7 @@ ConcurrentLinkedQueue 由 head 节点和 tail 节点组成，每个节点 (Node)
 
 > tail 节点并不总是尾节点，所以每次入队都必须先通过 tail 节点来找到尾节点。尾节点可能是 tail 节点，也可能是 tail 节点的 next 节点。
 
-## ConcurrentLinkedQueue 出队操作解析
+## ConcurrentLinkedQueue 出队解析
 ```java
     public E poll() {
         restartFromHead:

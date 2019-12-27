@@ -4,24 +4,29 @@
 主要使用费曼学习法进行团队知识分享学习，参考 [学习方法 ](/about/学习方法.md)。  
 如需学习请访问 [正式地址 ](http://review-notes.top/) ，正式地址内容经过多重校验查缺补漏。
 
-## 构建  
-- 使用 [vuepress](https://vuepress.vuejs.org/) 发布，使用 [Travis CI](https://travis-ci.org/GourdErwa/review-notes-dev) 持续集成 
-- 执行 `npm run docs:dev` 进入本地开发模式， 默认访问 [localhost:8080](http://localhost:8080/ )
-
 ## 内容列表
-- 编程语言 
-    * [Java 并发编程（In review，50%） ](/language/java-concurrency/)
+- 编程语言
+    * [Java 核心知识（In review） ](/language/java-core/)
+    * [Java 谜题（In review）](/language/java-puzzle/)
+    * [Java 并发编程（In review，80%） ](/language/java-concurrency/)
     * [Java 虚拟机（JVM)（In review） ](/language/java-jvm/)
     * [Scala 基础（Checking） ](/language/scala-basis/)
+
 - 技术框架
     * [Flink 基础（In review） ](/framework/flink-basis/)
     * [Redis（In review） ](/framework/redis/)
+
 - 算法与设计
     * [数据结构（In review） ](/algorithm/data-structures/)
     * [设计模式（In review） ](/algorithm/design-patterns/)
+
 - DevOps
     * [Git（In review） ](/devops/git/)
-        
+
+## 构建
+- 使用 [vuepress](https://vuepress.vuejs.org/) 发布，使用 [Travis CI](https://travis-ci.org/GourdErwa/review-notes-dev) 持续集成
+- 执行 `npm run docs:dev` 进入本地开发模式， 默认访问 [localhost:8080](http://localhost:8080/ )
+
 ## 如何贡献
 欢迎投稿、贡献。参考 [贡献说明 ](/about/贡献说明.md)
 
