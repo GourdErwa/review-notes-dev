@@ -22,6 +22,7 @@
     "@vuepress/plugin-google-analytics": "^1.2.0",
     "@vuepress/plugin-medium-zoom": "^1.2.0",
     "@vuepress/plugin-nprogress": "^1.2.0",
+    "markdown-it-katex": "^2.0.3",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-code-copy": "^1.0.4"
   }
