@@ -29,6 +29,11 @@ module.exports = [
         items: [
             {text: 'Git', link: '/devops/git/'}
         ]
+    },{
+        text: '面试题',
+        items: [
+            {text: 'Java 面试题', link: '/interview/java/'}
+        ]
     },
     {
         text: '关于',
