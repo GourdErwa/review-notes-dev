@@ -12,7 +12,8 @@ module.exports =
         '/framework/flink-basis/': require("../framework/flink-basis/_sidebar"),
         '/framework/redis/': require("../framework/redis/_sidebar"),
 
-        //算法与设计
+        //算法与理论
+        '/algorithm/computer-theory/': require("../algorithm/computer-theory/_sidebar"),
         '/algorithm/data-structures/': require("../algorithm/data-structures/_sidebar"),
 
         // DevOps

@@ -18,8 +18,9 @@ module.exports = [
         ]
     },
     {
-        text: '算法与设计',
+        text: '算法与理论',
         items: [
+            {text: '计算机理论', link: '/algorithm/computer-theory/'},
             {text: '设计模式', link: '/algorithm/design-patterns/'},
             {text: '数据结构', link: '/algorithm/data-structures/'}
         ]

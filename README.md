@@ -16,7 +16,7 @@
     * [Flink 基础（In review） ](/framework/flink-basis/)
     * [Redis（In review） ](/framework/redis/)
 
-- 算法与设计
+- 算法与理论
     * [数据结构（In review） ](/algorithm/data-structures/)
     * [设计模式（In review） ](/algorithm/design-patterns/)
 
