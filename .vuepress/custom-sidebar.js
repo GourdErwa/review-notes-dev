@@ -14,6 +14,9 @@ module.exports =
 
         //算法与理论
         '/algorithm/computer-theory/': require("../algorithm/computer-theory/_sidebar"),
+        '/algorithm/network/': require("../algorithm/network/_sidebar"),
+        '/algorithm/distributed-theory/': require("../algorithm/distributed-theory/_sidebar"),
+
         '/algorithm/data-structures/': require("../algorithm/data-structures/_sidebar"),
 
         // DevOps
