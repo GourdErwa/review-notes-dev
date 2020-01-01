@@ -26,7 +26,7 @@ module.exports = [
             ['DataSet语义注解', 'DataSet语义注解']
         ]
     }, {
-        title: "DataStream（Streaming）",
+        title: "DataStream（Streaming.md）",
         collapsable: true,
         sidebarDepth: 1,
         children: [

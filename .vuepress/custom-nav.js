@@ -13,7 +13,8 @@ module.exports = [
         text: '技术框架',
         items: [
             {text: 'Flink 基础', link: '/framework/flink-basis/'},
-            {text: 'Redis', link: '/framework/redis/'}
+            {text: 'Redis', link: '/framework/redis/'},
+            {text: 'Spark', link: '/framework/spark-basic/'}
         ]
     },
     {
