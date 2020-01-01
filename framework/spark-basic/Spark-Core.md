@@ -306,3 +306,101 @@ private def readBroadcastBlock(): T = Utils.tryOrIOException {
   }
 }
 ```
+## RPC 环境
+RpcEnv 是Spark 2.x.x版本中新出现的组件，主要负责节点之间的通信，在Spark 2.x.x以前版本中采用的是Akka。
+* 初始化RpcEnv的时候会判断是否是Driver端，如果是Driver端，生成系统名称sparkDriver，否则生成系统名称sparkExecutor。
+* 创建RpcEnv时先初始化一个RpcEnvConfig的案例类，里面保存了RpcEnv的配置信息。
+* 然后通过NettyRpcEnvFactory创建一个NettyRpcEnv，NettyRpcEnv是RpcEnv唯一的一个实现类。
+```scala
+def create(config: RpcEnvConfig): RpcEnv = {
+  val sparkConf = config.conf
+  // RPC传输对象的序列化采用 JavaSerializer
+  val javaSerializerInstance =
+    new JavaSerializer(sparkConf).newInstance().asInstanceOf[JavaSerializerInstance]
+  val nettyEnv =
+    new NettyRpcEnv(sparkConf, javaSerializerInstance, config.advertiseAddress,
+      config.securityManager, config.numUsableCores)
+  if (!config.clientMode) {
+    // 定义一个偏函数用来执行NettyRpcEnv的startServer方法，最终返回NettyRpcEnv和端口。
+    val startNettyRpcEnv: Int => (NettyRpcEnv, Int) = { actualPort =>
+      nettyEnv.startServer(config.bindAddress, actualPort)
+      (nettyEnv, nettyEnv.address.port)
+    }
+    try {
+      // 通过 Util s的 startServiceOnPort 方法启动制定端口的服务
+      Utils.startServiceOnPort(config.port, startNettyRpcEnv, sparkConf, config.name)._1
+    } catch {
+      case NonFatal(e) =>
+        nettyEnv.shutdown()
+        throw e
+    }
+  }
+  nettyEnv
+}
+```
+### RpcEndpoint
+是对Spark的RPC通信实体的统一抽象，所有运行于RPC框架之上的实体都应该继承该特质。
+* Spark早期版本节点间的消息通信主要采用Akka的Actor，从Spark 2.0.0版本开始移除了对Akka的依赖，开始使用RpcEndpoint。
+* RpcEndpoint是对能够处理RPC请求，给某一特定服务提供本地调用及跨节点调用的RPC组件的抽象。
+成员属性介绍：
+```scala
+rpcEnv：当前RpcEndpoint所属的RpcEnv。
+self：获取RpcEndpoint相关联的RpcEndpointRef。
+receive：接收消息并处理，但不需要给客户端回复。
+receiveAndReply：接收消息并处理，需要给客户端回复。回复是通过RpcCall-Context来实现的。
+onError：当处理消息发生异常时调用，可以对异常进行一些处理。
+onConnected：当客户端与当前节点连接上之后调用，可以针对连接进行一些处理。
+onDisconnected：当客户端与当前节点的连接断开之后调用，可以针对断开连接进行一些处理。
+onNetworkError：当客户端与当前节点之间的连接发生网络错误时调用，可以针对连接发生的网络错误进行一些处理。
+onStart：在RpcEndpoint开始处理消息之前调用，可以在RpcEndpoint正式工作之前做一些准备工作。
+onStop：在停止RpcEndpoint时调用，可以在RpcEndpoint停止的时候做一些收尾工作。
+stop：用于停止当前RpcEndpoint。
+```
+RpcEndpoint继承体系：
+
+<div align="center">
+    <img src="./_images/RpcEndpoint继承体系.png">
+    <p>RpcEndpoint继承体系</p>
+</div>
+
+* ThreadSafeRpcEndpoint是继承自RpcEndpoint的特质，主要用于对消息的处理，必须是线程安全的场景。
+* ThreadSafeRpcEndpoint对消息的处理都是串行的，即前一条消息处理完才能接着处理下一条消息。
+
+ThreadSafeRpcEndpoint继承体系：
+
+<div align="center">
+    <img src="./_images/ThreadSafeRpcEndpoint继承体系.png">
+    <p>ThreadSafeRpcEndpoint继承体系</p>
+</div>
+
+### RPC端点引用RpcEndpointRef
+客户端要向一个远端的RpcEndpoint发起请求，你就必须持有这个RpcEndpoint的RpcEndpointRef，RpcEndpointRef就是Actor-Ref的替代产物。  
+消息投递规则的三种情况：
+* at-most-once：每条应用了这种机制的消息会被投递0次或1次，这条消息可能会丢失。成本最低且性能最高，发送完消息后不会尝试去记录任何状态。
+* at-least-once：每条应用了这种机制的消息潜在地存在多次投递尝试并保证至少会成功一次，这条消息可能会重复但是不会丢失。需要发送者必须认识它所发送过的消息，并对没有收到回复的消息进行发送重试，要求接收者对消息的处理必须是幂等的。
+* exactly-once：每条应用了这种机制的消息只会向接收者准确地发送一次，这种消息既不会丢失，也不会重复。成本是三者中最高，性能却又是三者中最差的。它除了要求发送者有记忆和重试能力，还要求接收者能够认识接收过的消息并能过滤出那些重复的消息投递。
+RpcEndpointRef的成员属性：
+```scala
+// 成员变量
+maxRetries:RPC最大重新连接次数。可以使用spark.rpc.numRetries属性进行配置，默认为3次。
+retryWaitMs:RPC每次重新连接需要等待的毫秒数。可以使用spark.rpc.retry.wait属性进行配置，默认值为3秒。
+defaultAskTimeout:RPC的ask操作的默认超时时间。可以使用spark.rpc.askTimeout或者spark.network.timeout属性进行配置，默认值为120秒。spark.rpc.askTimeout属性的优先级更高。
+// 成员方法
+address：返回当前RpcEndpointRef对应RpcEndpoint的RPC地址（RpcAddress）。
+name：返回当前RpcEndpointRef对应RpcEndpoint的名称。
+send：发送单向异步的消息。所谓"单向"就是发送完后就会忘记此次发送，不会有任何状态要记录，也不会期望得到服务端的回复，采用了at-most-once的投递规则。
+ask[T: ClassTag](message: Any)：以默认的超时时间作为timeout参数，调用ask[T:ClassTag](message: Any, timeout: RpcTimeout)方法。
+askWithRetry[T: ClassTag](message: Any, timeout: RpcTimeout)：发送同步的请求，此类请求将会被RpcEndpoint接收，并在指定的超时时间内等待返回类型为T的处理结果。当此方法抛出SparkException时，将会进行请求重试，直到超过了默认的重试次数为止。由于此类方法会重试，因此要求服务端对消息的处理是幂等的，采用了at-least-once的投递规则。
+askWithRetry[T: ClassTag](message: Any)：以默认的超时时间作为timeout参数，调用askWithRetry[T: ClassTag](message: Any, timeout: RpcTimeout)。
+```
+### 传输上下文TransportConf
+由于RPC环境RpcEnv的底层也依赖于数据总线，因此需要创建传输上下文TransportConf，创建TransportConf是构造NettyRpcEnv的过程中的第一步
+* 对SparkConf进行了克隆，设置了spark.rpc.io.numConnectionsPerPeer和spark.rpc.io.threads传输线程数。
+```scala
+private[netty] val transportConf = SparkTransportConf.fromSparkConf(
+  conf.clone.set("spark.rpc.io.numConnectionsPerPeer", "1"),
+  "rpc",
+  conf.getInt("spark.rpc.io.threads", numUsableCores))
+```
+### 消息调度器Dispatcher
+创建消息调度器Dispatcher是有效提高NettyRpcEnv对消息异步处理并最大提升并行处理能力的前提。Dispatcher负责将RPC消息路由到对此消息处理的RpcEndpoint。
