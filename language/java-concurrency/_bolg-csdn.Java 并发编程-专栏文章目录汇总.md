@@ -37,7 +37,7 @@ Java 并发编程专栏系列笔记，系统性学习可访问个人技术博客
 - [Java 锁类型总结 ](https://gourderwa.blog.csdn.net/article/details/103590994)
 
 #### Java 并发编程-容器和工具篇
-- Java 并发容器-ConcurrentHashMap（未完成）
+- Java 并发容器-jdk1.8-ConcurrentHashMap（未完成）
 - [Java 并发容器-阻塞队列](https://gourderwa.blog.csdn.net/article/details/103735347)
 - [Java 并发容器-ConcurrentLinkedQueue](https://gourderwa.blog.csdn.net/article/details/103735326)
 - [Java 并行任务框架-ForkJoin](https://gourderwa.blog.csdn.net/article/details/103745243)
