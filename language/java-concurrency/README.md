@@ -13,3 +13,6 @@
 - [深入理解 Java 内存模型-程晓明](https://www.infoq.cn/profile/1278512?menu=publish#menu-trace)
 - [JSR133原版.pdf](https://github.com/GourdErwa/review-notes/blob/master/language/java-concurrency/_notes//JSR133原版.pdf)
 - [JSR133中文版.pdf](https://github.com/GourdErwa/review-notes/blob/master/language/java-concurrency/_notes//JSR133中文版.pdf)
+
+## 深入学习
+- [Why Memory Barriers？中文翻译（上）](http://www.wowotech.net/kernel_synchronization/Why-Memory-Barriers.html)
