@@ -5,7 +5,7 @@ module.exports =
         '/language/java-core/': require("../language/java-core/_sidebar"),
         '/language/java-puzzle/': require("../language/java-puzzle/_sidebar"),
         '/language/java-concurrency/': require("../language/java-concurrency/_sidebar"),
-
+        '/language/java-jvm/': require("../language/java-jvm/_sidebar"),
         '/language/scala-basis/': require("../language/scala-basis/_sidebar"),
 
         // 技术框架
