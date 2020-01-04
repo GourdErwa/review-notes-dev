@@ -2,7 +2,13 @@
 
 Java JVM-虚拟机专栏系列笔记，系统性学习可访问个人复盘笔记-技术博客 [Java JVM-虚拟机 ](https://review-notes.top/language/java-jvm/)
 
-## Java JVM(虚拟机)-自动内存管理
+
+Java JVM-虚拟机专栏系列笔记
 
 - [Java JVM 运行时内存数据区域](https://gourderwa.blog.csdn.net/article/details/103822458)
+
+- [Java JVM 引用有什么用](https://gourderwa.blog.csdn.net/article/details/103837418)
+
 - [Java JVM 对象的创建与访问过程](https://gourderwa.blog.csdn.net/article/details/103828111)
+
+- [Java JVM 对象的死亡过程](https://gourderwa.blog.csdn.net/article/details/103837408)
