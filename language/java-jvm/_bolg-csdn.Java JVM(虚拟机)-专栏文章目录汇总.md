@@ -19,3 +19,4 @@ Java JVM-虚拟机专栏系列笔记
 
 - [Java JVM JDK11 前的 7 个垃圾收集器](https://gourderwa.blog.csdn.net/article/details/103846592)
 
+- [Java JVM OpenJDK12 - Shenandoah 收集器](https://gourderwa.blog.csdn.net/article/details/103879021)
