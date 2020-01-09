@@ -77,9 +77,9 @@ module.exports = {
             'gitalk-maker',
             {
                 gitalkConfig: {
-                    clientID: 'fc77033af37adae7267a',
-                    clientSecret: '10034bc3a353b54297f34c8891d634bb7ddade2e',
-                    repo: 'review-notes',
+                    clientID: '78c74a9365beef96f17b',
+                    clientSecret: 'f9f497ecd5f6d04f325f7a7fb01de2e92a0d8e1e',
+                    repo: 'review-notes-dev',
                     owner: 'GourdErwa',
                     admin: ['GourdErwa'],
                     // id: location.pathname, // 无法配置默认用 location.pathname
