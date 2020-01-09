@@ -11,6 +11,8 @@ Java JVM-虚拟机专栏系列笔记，系统性学习可访问个人复盘笔�
 
 - [Java JVM 引用有什么用](https://gourderwa.blog.csdn.net/article/details/103837418)
 
+- [Java JVM JDK9-类加载机制](https://gourderwa.blog.csdn.net/article/details/103914303)
+
 - [Java JVM 对象的创建与访问过程](https://gourderwa.blog.csdn.net/article/details/103828111)
 
 - [Java JVM 对象的死亡过程](https://gourderwa.blog.csdn.net/article/details/103837408)
