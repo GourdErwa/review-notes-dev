@@ -53,7 +53,8 @@ module.exports = {
         '@vuepress/medium-zoom',
         '@vuepress/back-to-top',
         'vuepress-plugin-janitor',// 数学公式支持
-        '@vuepress/container',
+        'vuepress-plugin-smooth-scroll',// 使用平滑滚动
+        '@vuepress/container', // 在 VuePress 中使用 markdown 容器
         '@vuepress/active-header-links', {
             sidebarLinkSelector: '.sidebar-link',
             headerAnchorSelector: '.header-anchor'
@@ -72,7 +73,23 @@ module.exports = {
                 onlyFirstAndLastCommit: true,
             },
         ],
+        [
+            'gitalk-maker',
+            {
+                gitalkConfig: {
+                    clientID: 'fc77033af37adae7267a',
+                    clientSecret: '10034bc3a353b54297f34c8891d634bb7ddade2e',
+                    repo: 'review-notes',
+                    owner: 'GourdErwa',
+                    admin: ['GourdErwa'],
+                    // id: location.pathname, // 无法配置默认用 location.pathname
+                    distractionFreeMode: false, // Facebook-like distraction free mode
+                    labels:['Gitalk']
+                }
+            }
+        ],
         ['vuepress-plugin-code-copy', true], // 代码复制
+        'reading-progress', // 阅读进度条 https://github.com/tolking/vuepress-plugin-reading-progress
         'vuepress-plugin-baidu-autopush' // 百度站点自动推送
     ]
 }
