@@ -71,8 +71,6 @@ Java 源文件最终编译为 Class 文件，Class 文件中描述的各类信�
 解析阶段是 Java 虚拟机将常量池内的符号引用替换为直接引用的过程。
 
 解析动作主要针对类或接口、字段、类方法、接口方法、方法类型、方法句柄和调用点限定符这 7 类符号引用进行，
-分别对应于常量池的 CONSTANT_Class_info、CON-STANT_Fieldref_info、CONSTANT_Methodref_info、CONSTANT_InterfaceMethodref_info、CONSTANT_MethodType_info、CONSTANT_MethodHandle_info、CONSTANT_Dyna-mic_info 和 CONSTANT_InvokeDynamic_info 8 种常量类型。
-
 
 简单的理解为我们类中如果变量是其他类的类型、继承了父类、实现了接口，那么该阶段会做相关的解析。更深入的了解可以参考《深入理解 Java 虚拟机：JVM 高级特性与最佳实践（第 3 版）》7.3.4 章节内容。
 
