@@ -10,7 +10,7 @@
 * [Java 核心知识（In review） ](/language/java-core/)
 * [Java 谜题（In review）](/language/java-puzzle/)
 * [Java 并发编程](/language/java-concurrency/)
-* [Java 虚拟机（JVM)](/language/java-jvm/)
+* [Java JVM-虚拟机](/language/java-jvm/)
 * [Scala 基础](/language/scala-basis/)
 
 ## 技术框架

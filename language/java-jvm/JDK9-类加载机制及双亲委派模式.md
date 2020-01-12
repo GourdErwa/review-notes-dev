@@ -12,6 +12,7 @@ Java 源文件最终编译为 Class 文件，Class 文件中描述的各类信�
 - Class 文件中的信息进入到虚拟机后会发生什么变化
 - 类加载的过程
 - JDK 9 前后双亲委派模式
+- JDK 组件覆盖机制
 
 ## 二、类加载过程
 
@@ -103,8 +104,8 @@ Java 源文件最终编译为 Class 文件，Class 文件中描述的各类信�
 - 应用程序类加载器（App ClassLoader）  
 它负责加载用户类路径（ClassPath）上所有的类库，开发者同样可以直接在代码中使用这个类加载器。如果应用程序中没有自定义过自己的类加载器，一般情况下这个就是程序中默认的类加载器。
 
-
-### 3. JDK 9 前的双亲委派模式
+## 四、双亲委派模式
+### 1. JDK 9 前的双亲委派模式
 JDK 9 之前的 Java 应用都是由「启动类加载器」、「扩展类加载器」、「应用程序类加载器」这三种类加载器互相配合来完成加载的，如果有需要还可以加入自定义的类加载器来进行拓展
 > 自定义的类加载器场景：典型的如增加除了磁盘位置之外的 Class 文件来源，或者通过类加载器实现类的隔离、重载等功能。
 
@@ -116,7 +117,7 @@ JDK 9 之前的 Java 应用都是由「启动类加载器」、「扩展类加�
 Java 中的类随着它的类加载器一起具备了一种*带有优先级的层次关系*。
 > 例如：类 java.lang.Object，它存放在 rt.jar 之中，无论哪一个类加载器要加载这个类，最终都是委派给处于模型最顶端的启动类加载器进行加载，因此 Object 类在程序的各种类加载器环境中都能够保证是同一个类。
 
-### 4. JDK 9 的双亲委派模式
+### 2. JDK 9 的双亲委派模式
 JDK 9 为了模块化的支持，对双亲委派模式做了一些改动：
 
 1. 扩展类加载器被平台类加载器（Platform ClassLoader）取代。  
@@ -187,11 +188,16 @@ jdk.jcmd                        jdk.xml.ws*
 jdk.jconsole
 ```
 
-### 5. 双亲委派模式示意图
+### 3. 双亲委派模式示意图
 
 <div align="center">
     <img src="https://blog-review-notes.oss-cn-beijing.aliyuncs.com/language/java-jvm/_images/类加载-双亲委派模式.jpeg">
 </div>
+
+## 五、 覆盖机制 java.endorsed.dirs 变化
+JDK 9 之前可设置系统属性 [java.endorsed.dirs](https://docs.oracle.com/javase/8/docs/technotes/guides/standards/index.html) 指定覆盖 JDK 的中的组件，或者直接将覆盖类打包为 JAR 文件放入 `<java-home>\lib\endorsed` 目录
+
+JDK 9 因为模块化的设计[删除了该机制 ](https://docs.oracle.com/en/java/javase/13/migrate/index.html#JSMIG-GUID-8E83E51A-88A3-4E9A-8E2A-66E1D66A966C)，可以使用可升级模块或将 JAR 文件放在类路径中。
 
 ## 总结
 

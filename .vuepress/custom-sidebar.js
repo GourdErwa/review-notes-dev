@@ -23,6 +23,6 @@ module.exports =
         '/devops/git/': require("../devops/git/_sidebar"),
 
         // 面试题
-        '/interview/java/': require("../interview/java/_sidebar")
+        '/interview/java/': require("../interview/_sidebar")
     }
 ;
