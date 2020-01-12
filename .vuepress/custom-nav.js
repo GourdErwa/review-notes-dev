@@ -32,12 +32,10 @@ module.exports = [
         items: [
             {text: 'Git（In review）', link: '/devops/git/'}
         ]
-    }, {
+    },
+    {
         text: '面试题',
-        items: [
-            {text: 'Java-并发编程面试题', link: '/interview/Java-并发编程面试题.md'},
-            {text: 'Java-JVM 虚拟机面试题', link: '/interview/Java-JVM 虚拟机面试题.md'}
-        ]
+        link: '/interview/'
     },
     {
         text: '关于',
