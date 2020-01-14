@@ -30,3 +30,10 @@ Java JVM-虚拟机专栏系列笔记，系统性学习可访问个人复盘笔�
 - [故障诊断-高CPU占用](https://gourderwa.blog.csdn.net/article/details/103894534)
 
 - [故障诊断-高内存占用、内存泄漏](https://gourderwa.blog.csdn.net/article/details/103894558)
+
+#### Java JVM-虚拟机子系统
+
+- [Java JVM 运行时栈帧结构](https://gourderwa.blog.csdn.net/article/details/103979966)
+
+- [Java JVM 字节码指令，指令表收录](https://gourderwa.blog.csdn.net/article/details/103976523)
+

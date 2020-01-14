@@ -1,5 +1,13 @@
 module.exports = [
     {
+        title: "Java 核心知识-基础",
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+            ['深入理解内部类的作用', '深入理解内部类的作用']
+        ]
+    },
+    {
         title: "Java 核心知识-集合",
         collapsable: false,
         sidebarDepth: 1,
