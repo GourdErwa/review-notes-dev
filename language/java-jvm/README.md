@@ -14,4 +14,5 @@
 
 ## 收藏推荐
 - [Java 平台标准文档](https://docs.oracle.com/en/java/javase/index.html)
+- [Java语言和虚拟机规范](https://docs.oracle.com/javase/specs/index.html)
 - [在线分析 GC 日志](https://gceasy.io/)
