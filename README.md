@@ -26,6 +26,7 @@
 
 ## DevOps
 * [Git（In review） ](/devops/git/)
+* [Jetbrains 产品 ](/devops/jetbrains/)
 
 ## 面试题
 [面试题](/interview/)

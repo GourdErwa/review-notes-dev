@@ -9,4 +9,5 @@ Java 核心知识专栏系列笔记，系统性学习可访问个人技术博客
 #### Java 核心知识-集合
 - [Java 哈希碰撞实战- HashMap 原理](https://blog.csdn.net/xiaohulunb/article/details/103809321)
 
-Java 核心知识专栏系列笔记，系统性学习可访问个人复盘笔记-技术博客 [Java 核心知识 ](https://review-notes.top/language/java-core/)
+#### Java 核心知识-反射与动态类型
+- [Java 反射调用静态方法](https://blog.csdn.net/xiaohulunb/article/details/104020384)

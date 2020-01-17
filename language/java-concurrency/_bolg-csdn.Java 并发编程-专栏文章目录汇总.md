@@ -17,7 +17,7 @@ Java 并发编程专栏系列笔记，系统性学习可访问个人技术博客
 - [原子操作类（atomic 包）](https://gourderwa.blog.csdn.net/article/details/103655219)
 
 #### 并发编程-线程篇
-- [线程简介 ](https://gourderwa.blog.csdn.net/article/details/103619448)
+- [线程 Thread 简介 ](https://gourderwa.blog.csdn.net/article/details/103619448)
 - [线程等待通知机制（wait、notify）](https://gourderwa.blog.csdn.net/article/details/103619528)
 - [线程等待操作比较（sleep、wait、park、Condition）](https://gourderwa.blog.csdn.net/article/details/103701793)
 - [线程关键类-ThreadLocal](https://gourderwa.blog.csdn.net/article/details/103636811)

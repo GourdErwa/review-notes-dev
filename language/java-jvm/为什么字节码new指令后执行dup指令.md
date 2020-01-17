@@ -42,7 +42,7 @@ new 指令后，会执行构造函数，使用了第一个引用。
 
 - 程序不做赋值操作，直接操作对象的成员。则直接使用第二个引用。比如：new Object().toString()
 
-- 程序不对这个对象操作，第二个引用被弹出 pop
+- 程序不对这个对象操作，第二个引用被 `pop` 指令弹出
 
 **字节码实战验证：**
 
@@ -140,6 +140,8 @@ public class NewDupCode {
 ## 本专栏更多相关笔记
 - [运行时内存数据区域 ](https://gourderwa.blog.csdn.net/article/details/103822458)
 
-- [Java JVM 运行时栈帧结构、字节码分析实战 ](https://gourderwa.blog.csdn.net/article/details/103979966)
+- [Java JVM 运行时栈帧结构、字节码分析实战](https://gourderwa.blog.csdn.net/article/details/103979966)
 
-- [Java JVM 字节码指令，指令表收录 ](https://gourderwa.blog.csdn.net/article/details/103976523)
+- [Java JVM 字节码指令，指令表收录](https://gourderwa.blog.csdn.net/article/details/103976523)
+
+- [Java JVM 从方法调用的角度分析重载、重写的本质](https://gourderwa.blog.csdn.net/article/details/103995120)

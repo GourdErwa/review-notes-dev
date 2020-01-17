@@ -41,3 +41,6 @@ Java JVM-虚拟机专栏系列笔记，系统性学习可访问个人复盘笔�
 
 - [Java JVM 从方法调用的角度分析重载、重写的本质](https://gourderwa.blog.csdn.net/article/details/103995120)
 
+- [Java JVM 动态方法调用之方法句柄 MethodHandle](https://gourderwa.blog.csdn.net/article/details/104024058)
+
+- [Java JVM 动态方法调用指令 invokedynamic 实现分析（以 Lambda 表达式实现原理为例）](https://gourderwa.blog.csdn.net/article/details/104024716)

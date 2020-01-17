@@ -30,7 +30,8 @@ module.exports = [
     {
         text: 'DevOps',
         items: [
-            {text: 'Git（In review）', link: '/devops/git/'}
+            {text: 'Git（In review）', link: '/devops/git/'},
+            {text: 'jetbrains 产品', link: '/devops/jetbrains/'}
         ]
     },
     {
