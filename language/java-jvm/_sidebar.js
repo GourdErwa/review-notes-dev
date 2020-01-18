@@ -37,7 +37,9 @@ module.exports = [
             ['为什么字节码new指令后执行dup指令', '为什么 new 指令后执行 dup 指令'],
             ['从方法调用的角度分析重载重写的本质', '从方法调用的角度分析重载重写的本质'],
             ['动态方法之方法句柄 MethodHandle', '动态方法之方法句柄 MethodHandle'],
-            ['动态方法调用指令invokedynamic','动态方法调用指令 invokedynamic']
+            ['动态方法调用指令invokedynamic','动态方法调用指令 invokedynamic'],
+            ['代码是怎么运行起来的','代码是怎么运行起来的'],
+            ['编译器优化技术','编译器优化技术']
         ]
     }
 ];

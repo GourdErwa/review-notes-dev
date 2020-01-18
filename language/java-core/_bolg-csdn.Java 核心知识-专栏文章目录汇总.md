@@ -5,6 +5,9 @@ Java 核心知识专栏系列笔记，系统性学习可访问个人技术博客
 #### Java 核心知识-基础篇
 - [Java 深入理解内部类的作用](https://gourderwa.blog.csdn.net/article/details/103972092)
 
+- [Java 从字节码本质上分析 值传递引用传递，纠正大部分人的错误理解](https://gourderwa.blog.csdn.net/article/details/104031747)
+
+- [Java 通过字节码分析自动装箱拆箱的过程](https://gourderwa.blog.csdn.net/article/details/104032704)
 
 #### Java 核心知识-集合
 - [Java 哈希碰撞实战- HashMap 原理](https://blog.csdn.net/xiaohulunb/article/details/103809321)
