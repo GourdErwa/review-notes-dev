@@ -14,3 +14,8 @@ Java 核心知识专栏系列笔记，系统性学习可访问个人技术博客
 
 #### Java 核心知识-反射与动态类型
 - [Java 反射调用静态方法](https://blog.csdn.net/xiaohulunb/article/details/104020384)
+
+## 专栏更多文章笔记
+- [Java 并发编程-专栏文章目录汇总 ](https://blog.csdn.net/xiaohulunb/article/details/103594468)
+
+- [Java JVM（JDK13）-专栏文章目录汇总 ](https://blog.csdn.net/xiaohulunb/article/details/103828570)

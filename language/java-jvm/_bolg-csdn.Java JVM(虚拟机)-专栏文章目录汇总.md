@@ -2,7 +2,6 @@
 
 Java JVM-虚拟机专栏系列笔记，系统性学习可访问个人复盘笔记-技术博客 [Java JVM-虚拟机 ](https://review-notes.top/language/java-jvm/)
 
-
 #### Java JVM-内存管理
 
 - [运行时内存数据区域](https://gourderwa.blog.csdn.net/article/details/103822458)
@@ -11,7 +10,9 @@ Java JVM-虚拟机专栏系列笔记，系统性学习可访问个人复盘笔�
 
 - [JDK9-类加载机制 双亲委派模式](https://gourderwa.blog.csdn.net/article/details/103914303)
 
-- [对象的创建与访问过程](https://gourderwa.blog.csdn.net/article/details/103828111)
+- [从虚拟机的角度看对象的创建与访问](https://gourderwa.blog.csdn.net/article/details/103828111)
+
+- [从程序员的角度看对象的创建过程与内存分配](https://gourderwa.blog.csdn.net/article/details/104035058)
 
 - [对象的死亡过程](https://gourderwa.blog.csdn.net/article/details/103837408)
 
@@ -47,3 +48,8 @@ Java JVM-虚拟机专栏系列笔记，系统性学习可访问个人复盘笔�
 
 - [从虚拟机层面看程序代码是怎么运行起来的](https://gourderwa.blog.csdn.net/article/details/104030355)
 
+
+## 专栏更多文章笔记
+- [Java 核心知识-专栏文章目录汇总 ](https://gourderwa.blog.csdn.net/article/details/104020339)
+
+- [Java 并发编程-专栏文章目录汇总 ](https://blog.csdn.net/xiaohulunb/article/details/103594468)
