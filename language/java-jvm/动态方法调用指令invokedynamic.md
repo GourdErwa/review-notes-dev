@@ -66,6 +66,7 @@ BootstrapMethods:  // 引导方法
 ## 参考
 - 动态调用站点 CallSite 对象有关的更多字段类型可参考 AbstractValidatingLambdaMetafactory 类定义。
 
+- [官方-Using the invokedynamic Instruction](https://docs.oracle.com/en/java/javase/13/vm/support-non-java-languages.html#GUID-5A6C7674-3FE3-48EC-A685-5F71FDBFE921)
 - [Java 8 的 Lambda 表达式为什么要基于 invokedynamic？](https://www.zhihu.com/question/39462935)
 ## 本专栏更多相关笔记
 - [Java JVM 运行时栈帧结构、字节码分析实战 ](https://gourderwa.blog.csdn.net/article/details/103979966)

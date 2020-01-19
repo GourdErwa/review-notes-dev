@@ -2,6 +2,8 @@
 
 Java JVM-虚拟机专栏系列笔记，系统性学习可访问个人复盘笔记-技术博客 [Java JVM-虚拟机 ](https://review-notes.top/language/java-jvm/)
 
+本专栏学习完成后尝试自我面试 [Java 高级面试题 ](https://gourderwa.blog.csdn.net/article/details/104042317)
+
 #### Java JVM-内存管理
 
 - [运行时内存数据区域](https://gourderwa.blog.csdn.net/article/details/103822458)
@@ -48,6 +50,7 @@ Java JVM-虚拟机专栏系列笔记，系统性学习可访问个人复盘笔�
 
 - [从虚拟机层面看程序代码是怎么运行起来的](https://gourderwa.blog.csdn.net/article/details/104030355)
 
+- [虚拟机性能增强优化技术介绍](https://gourderwa.blog.csdn.net/article/details/104041935)
 
 ## 专栏更多文章笔记
 - [Java 核心知识-专栏文章目录汇总 ](https://gourderwa.blog.csdn.net/article/details/104020339)
