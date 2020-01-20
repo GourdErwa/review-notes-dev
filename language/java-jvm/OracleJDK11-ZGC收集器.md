@@ -12,3 +12,4 @@ Java JVM-虚拟机专栏系列笔记，系统性学习可访问个人复盘笔�
 - 《深入理解 Java 虚拟机：JVM 高级特性与最佳实践（第 3 版）》周志明 著
 - [wiki.openjdk-ZGC](https://wiki.openjdk.java.net/display/zgc/Main)
 - [ZGC 原理是什么，它为什么能做到低延时？R大回答](https://www.zhihu.com/question/287945354/answer/458761494)
+- [An Introduction to ZGC](https://www.baeldung.com/jvm-zgc-garbage-collector)
