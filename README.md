@@ -14,6 +14,7 @@
 * [Scala 基础](/language/scala-basis/)
 
 ## 技术框架
+* [Spark 基础（In review） ](/framework/spark-basis/)
 * [Flink 基础（In review） ](/framework/flink-basis/)
 * [Redis（In review） ](/framework/redis/)
 
@@ -27,6 +28,7 @@
 ## DevOps
 * [Git（In review） ](/devops/git/)
 * [Jetbrains 产品 ](/devops/jetbrains/)
+* [其他 ](/devops/other/)
 
 ## 面试题
 [面试题](/interview/)
@@ -40,17 +42,13 @@
 
 ### 贡献者
 - [liming199323-Z.liming](https://github.com/liming199323)
-* [In review]   [Scala 基础-语言核心特性 ](/language/scala-basis/)
+  * [Scala 基础-语言核心特性 ](/language/scala-basis/)
 - [VVvista-W.tingting](https://github.com/VVvista) 
-* [In review]   [数据结构 ](/algorithm/data-structures/)
+  * [数据结构 ](/algorithm/data-structures/)
 - [yssmars-Y.shuaishuai](https://github.com/yssmars) 
-* [In review]   [Redis ](/framework/redis/)
-- [cmshome-L.xuekai](https://github.com/cmshome) 
-* [In review]   [Java 虚拟机（JVM) ](/language/java-jvm/) 
-- [tangzhiwen-T.zhiwen](https://github.com/tangzhiwen) 
-* [In review]   [Git ](/devops/git/)
-- [monotcoder-Y.mo](https://github.com/monotcoder)   
-* [In review]   [设计模式 ](/algorithm/design-patterns/) 
+  * [Redis ](/framework/redis/)
+- [tangzhiwen-T.zhiwen](https://github.com/tangzhiwen)
+  * [Git ](/devops/git/)
 ## License
 MIT License
 

@@ -2,7 +2,7 @@
 
 Java JVM-虚拟机专栏系列笔记，系统性学习可访问个人复盘笔记-技术博客 [Java JVM-虚拟机 ](https://review-notes.top/language/java-jvm/)
 
-[[toc]]
+[toc]
 ## 前言
 目标是创建一个可扩展的低延迟垃圾收集器，该垃圾收集器能够处理大小从几GB到几TB的堆，并且GC暂停时间不超过10ms。
 

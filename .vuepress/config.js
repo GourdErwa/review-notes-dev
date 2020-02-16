@@ -7,7 +7,7 @@ module.exports = {
     // base: '/review-notes/',
     markdown: {
         lineNumbers: false, // 代码块显示行号
-        toc: {includeLevel: [2, 3]},
+        toc: {includeLevel: [2, 3], "markerPattern": /^\[toc\]/im},
         extendMarkdown: md => {
             md.set({html: true}),
                 md.use(require("markdown-it-katex"))
@@ -84,7 +84,7 @@ module.exports = {
                     admin: ['GourdErwa'],
                     // id: location.pathname, // 无法配置默认用 location.pathname
                     distractionFreeMode: false, // Facebook-like distraction free mode
-                    labels:['Gitalk']
+                    labels: ['Gitalk']
                 }
             }
         ],

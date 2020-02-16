@@ -2,7 +2,7 @@
 
 Java 核心知识专栏系列笔记，系统性学习可访问个人复盘笔记-技术博客 [Java 核心知识 ](https://review-notes.top/language/java-core/)
 
-[[toc]]
+[toc]
 
 ## 一、前言
 本节内容主要研究 for、foreach 循环的底层实现原理，再比较两种实现方式的性能。最后通过 RandomAccess 接口说明 JDK 让我们怎么去识别集合是否支持随机访问。

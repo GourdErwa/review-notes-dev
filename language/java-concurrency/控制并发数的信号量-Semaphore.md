@@ -2,7 +2,7 @@
 
 Java 并发编程专栏系列笔记，系统性学习可访问个人复盘笔记-技术博客 [Java 并发编程 ](https://review-notes.top/language/java-concurrency/)
 
-[[toc]]
+[toc]
 ## Semaphore 是什么
 Semaphore(信号量) 是用来控制同时访问特定资源的线程数量，它通过协调各个线程，以保证合理的使用公共资源。
 

@@ -13,6 +13,7 @@ module.exports = [
     {
         text: '技术框架',
         items: [
+            {text: 'Spark 基础（In review）', link: '/framework/spark-basis/'},
             {text: 'Flink 基础（In review）', link: '/framework/flink-basis/'},
             {text: 'Redis（In review）', link: '/framework/redis/'}
         ]
@@ -31,7 +32,8 @@ module.exports = [
         text: 'DevOps',
         items: [
             {text: 'Git（In review）', link: '/devops/git/'},
-            {text: 'jetbrains 产品', link: '/devops/jetbrains/'}
+            {text: 'jetbrains 产品', link: '/devops/jetbrains/'},
+            {text: '其他', link: '/devops/other/'}
         ]
     },
     {
