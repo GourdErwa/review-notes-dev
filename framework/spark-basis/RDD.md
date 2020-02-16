@@ -109,3 +109,7 @@ RDD 每经过一次转换操作都会生成一个新的 RDD，它们之间存在
 
 ### persist 和 checkPoint 的区别
 persist 也可以选择将数据缓存到磁盘当中，但是它交给 blockManager 管理的，一旦程序运行结束，blockManager 也会被停止，这时候缓存的数据就会被释放掉。而 checkPoint 持久化的数据并不会被释放，是一直存在的，可以被其它的程序所使用。
+
+<div align="center">
+    <img src="https://blog-review-notes.oss-cn-beijing.aliyuncs.com/gourderwa.footer.jpeg">
+</div>

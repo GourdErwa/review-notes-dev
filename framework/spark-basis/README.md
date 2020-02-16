@@ -4,3 +4,7 @@
 
 ## 参考
 - <<Spark 内核设计的艺术>>
+
+<div align="center">
+    <img src="https://blog-review-notes.oss-cn-beijing.aliyuncs.com/gourderwa.footer.jpeg">
+</div>

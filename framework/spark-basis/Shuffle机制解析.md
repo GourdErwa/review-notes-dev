@@ -49,3 +49,7 @@ SortShuffleManager 有两种运行机制，一种是普通机制，另一种是 
 * 在将数据写入内存缓冲区的时候，普通机制要先将数据写入 Map 或者 Array 的内存数据结构中，而 bypass 机制是根据 key 的 hash 值直接写入内存缓冲区中。
 
 * bypass 机制在写入内存缓冲区之前没有对数据的排序操作，因此在 reduce task 比较少的情况下，开启 bypass 机制，不需要对数据排序，节省运算性能。
+
+<div align="center">
+    <img src="https://blog-review-notes.oss-cn-beijing.aliyuncs.com/gourderwa.footer.jpeg">
+</div>

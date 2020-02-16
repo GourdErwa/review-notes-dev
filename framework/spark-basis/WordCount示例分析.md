@@ -58,3 +58,7 @@ object WordCount {
 * DAGScheduler 收到 Task 完成的消息后，先判断是什么类型的任务，如果是 ShuffleMapTask 则将返回的结果记录到 Driver 端，并且判断 ShuffleMapStage 已经完成，则去提交下一个 Stage；如果是 ResultTask 完成了，则将结果传递给 JobWaiter，并将该 Job 标记为完成状态。
 
 * JobWaiter 是任务一开始由 SparkContext 创建的一个对象，用来阻塞等待任务完成，并处理结果。最终结果数据会被放入一个数组中，由 collect 方法返回给客户端，到此一个 WordCount 任务就完成了。
+
+<div align="center">
+    <img src="https://blog-review-notes.oss-cn-beijing.aliyuncs.com/gourderwa.footer.jpeg">
+</div>

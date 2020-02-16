@@ -89,3 +89,7 @@ Vimium 支持命令重复。
 - [vimium/wiki](https://github.com/philc/vimium/wiki)
 - [github-vimium](https://github.com/philc/vimium)
 - [chrome-扩展程序 ](https://chrome.google.com/extensions/detail/dbepggeogbaibhgnhhndojpepiihcmeb)
+
+<div align="center">
+    <img src="https://blog-review-notes.oss-cn-beijing.aliyuncs.com/gourderwa.footer.jpeg">
+</div>

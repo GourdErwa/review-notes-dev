@@ -162,3 +162,7 @@ Task 是任务真正的执行者，每个 Stage 会根据 Partition 的数量生
 - 《Spark SQL 内核剖析》
 - [Apache Spark 源代码演练-Spark 论文阅读笔记以及作业提交和运行 ](https://www.alibabacloud.com/forum/read-471)
 - [spark-job-execution-model](https://www.cloudwalker.io/2018/12/07/spark-job-execution-model/)
+
+<div align="center">
+    <img src="https://blog-review-notes.oss-cn-beijing.aliyuncs.com/gourderwa.footer.jpeg">
+</div>

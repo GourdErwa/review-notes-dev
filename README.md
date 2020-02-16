@@ -6,32 +6,31 @@
 
 如需学习请访问 [正式地址](http://review-notes.top/) ，正式地址内容经过多重校验查缺补漏。
 
-## 编程语言
-* [Java 核心知识（In review） ](/language/java-core/)
-* [Java 谜题（In review）](/language/java-puzzle/)
-* [Java 并发编程](/language/java-concurrency/)
-* [Java JVM-虚拟机](/language/java-jvm/)
-* [Scala 基础](/language/scala-basis/)
+## 内容
+- 编程语言
+    * [Java 核心知识（In review） ](/language/java-core/)
+    * [Java 谜题（In review）](/language/java-puzzle/)
+    * [Java 并发编程](/language/java-concurrency/)
+    * [Java JVM-虚拟机](/language/java-jvm/)
+    * [Scala 基础](/language/scala-basis/)
 
-## 技术框架
-* [Spark 基础（In review） ](/framework/spark-basis/)
-* [Flink 基础（In review） ](/framework/flink-basis/)
-* [Redis（In review） ](/framework/redis/)
+- 技术框架
+    * [Spark 基础（In review） ](/framework/spark-basis/)
+    * [Flink 基础（In review） ](/framework/flink-basis/)
+    * [Redis（In review） ](/framework/redis/)
 
-## 算法设计与理论
-* [计算机组成原理（In review） ](/algorithm/computer-theory/)
-* [计算机网络（In review） ](/algorithm/network/)
-* [分布式理论（In review） ](/algorithm/distributed-theory/)
-* [数据结构（In review） ](/algorithm/data-structures/)
-* [设计模式（In review） ](/algorithm/design-patterns/)
+- 算法设计与理论
+    * [计算机组成原理（In review） ](/algorithm/computer-theory/)
+    * [计算机网络（In review） ](/algorithm/network/)
+    * [分布式理论（In review） ](/algorithm/distributed-theory/)
+    * [数据结构（In review） ](/algorithm/data-structures/)
+    * [设计模式（In review） ](/algorithm/design-patterns/)
 
-## DevOps
-* [Git（In review） ](/devops/git/)
-* [Jetbrains 产品 ](/devops/jetbrains/)
-* [其他 ](/devops/other/)
+- DevOps
+    * [Git（In review） ](/devops/git/)
+    * [收藏系列「:+1:」 ](/devops/dev-tools)
 
-## 面试题
-[面试题](/interview/)
+- [面试题](/interview/)
 
 ## 本地构建
 - 使用 [vuepress](https://vuepress.vuejs.org/) 发布，使用 [Travis CI](https://travis-ci.org/GourdErwa/review-notes-dev) 持续集成
@@ -45,10 +44,6 @@
   * [Scala 基础-语言核心特性 ](/language/scala-basis/)
 - [VVvista-W.tingting](https://github.com/VVvista) 
   * [数据结构 ](/algorithm/data-structures/)
-- [yssmars-Y.shuaishuai](https://github.com/yssmars) 
-  * [Redis ](/framework/redis/)
-- [tangzhiwen-T.zhiwen](https://github.com/tangzhiwen)
-  * [Git ](/devops/git/)
 ## License
 MIT License
 

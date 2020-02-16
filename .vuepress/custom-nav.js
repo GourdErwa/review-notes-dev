@@ -32,8 +32,7 @@ module.exports = [
         text: 'DevOps',
         items: [
             {text: 'Git（In review）', link: '/devops/git/'},
-            {text: 'jetbrains 产品', link: '/devops/jetbrains/'},
-            {text: '其他', link: '/devops/other/'}
+            {text: '工具收藏系列', link: '/devops/dev-tools/'}
         ]
     },
     {
@@ -44,9 +43,7 @@ module.exports = [
         text: '关于',
         items: [
             {text: '学习方法', link: '/about/学习方法.md'},
-            {text: '贡献说明', link: '/about/贡献说明.md'},
-            {text: '资源收集清单', link: '/about/资源收集清单.md'},
-            {text: '文档收集清单', link: '/about/文档收集清单.md'}
+            {text: '贡献说明', link: '/about/贡献说明.md'}
         ]
     }
 ]
