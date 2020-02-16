@@ -2,7 +2,7 @@
 
 [toc]
 
-## 一. 简介
+## 1. 简介
 
 ### Spark 的身世
 [Spark](https://spark.apache.org/) 是一个通用的并行计算框架，由加州伯克利大学（UC Berkeley）的 AMP 实验室开发于 2009 年，并于 2010 年开源，2013 年成长为 Apache 旗下在大数据领域最活跃的开源项目之一。  
@@ -38,7 +38,7 @@
 
   Spark 将内|存划分为堆内存储内存、堆内执行内存、堆外存储内存和堆外执行内存。Spark 即提供了执行内存和存储内存之间固定边界的实现，也提供了执行内存和存储内存之间"软"边界的实现。Spark 默认使用第二种实现方式，无论存储或是执行内存，当哪一方的资源不足时，都可以借用另一方的资源，从而最大限度地提高了资源的利用率。
 
-## 二. 运行时组件
+## 2. 运行时组件
 
 <div align="center">
     <img src="https://ipic-review-notes.oss-cn-beijing.aliyuncs.com/2020-02-14-124752.jpg" height="300px">
@@ -75,7 +75,7 @@ Master 是在 local 和 standalone 模式部署下 Spark 集群的一名重要�
 ### Executor
 负责执行 Spark 任务的容器，在 Worker 上启动，通过 launchTask() 方法创建 TaskRunner 对象来执行任务，初始化完成后会和 Driver 建立通信，并将任务最后的执行结果发送给 Driver。
 
-## 三. 编程模型
+## 3. 编程模型
 
 <div align="center">
     <img src="https://ipic-review-notes.oss-cn-beijing.aliyuncs.com/2020-02-14-spark-job-runtime.png">

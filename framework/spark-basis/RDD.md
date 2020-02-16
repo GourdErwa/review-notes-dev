@@ -1,10 +1,10 @@
 > 专栏原创出处：[github-源笔记文件 ](https://github.com/GourdErwa/review-notes/tree/master/framework/spark-basis) ，[github-源码 ](https://github.com/GourdErwa/spark-advanced)，欢迎 Star，转载请附上原文出处链接和本声明。
 
 [toc]
-## 一. 什么是 RDD
+## 1. 什么是 RDD
 RDD 是一个弹性的分布式的数据集，是 Spark 中最基础的抽象。它表示了一个可以并行操作的、不可变得、被分区了的元素集合。用户不需要关心底层复杂的抽象处理，直接使用方便的算子处理和计算就可以了。
 <div align="center">
-    <img src="./_images/RDD.png">
+    <img src="https://ipic-review-notes.oss-cn-beijing.aliyuncs.com/2020-02-16-RDD.png">
     <p>RDD 示意图 </p>
 </div>
 
@@ -69,7 +69,7 @@ println("Counter value: " + counter) // Counter value: 0
 
 * 可以使用 Accumulator 累加器来避免此类问题，详细介绍请参考《共享变量》部分。
 
-## 二. Stage 划分
+## 2. Stage 划分
 
 ### 宽依赖与窄依赖
 RDD 每经过一次转换操作都会生成一个新的 RDD，它们之间存在着依赖关系，这种依赖关系被划分成了两种，即**窄依赖**和**宽依赖**。
@@ -89,13 +89,15 @@ RDD 每经过一次转换操作都会生成一个新的 RDD，它们之间存在
     <p>stage 划分 </p>
 </div>
 
-## 三. RDD 的缓存
+## 3. RDD 的缓存
 当一个 RDD 需要被重复使用时，或者当任务失败重新计算的时候，这时如果将 RDD 缓存起来，就可以避免重新计算，保证程序运行的性能。
 * RDD 的缓存有三种方式：cache、persist、checkPoint。
 
 * cache 方法不是在被调用的时候立即进行缓存，而是当触发了 action 类型的算子之后，才会进行缓存。
 
 * Spark 会监控每个节点上的缓存情况，会丢弃掉最少使用的旧的缓存数据，也可以手动释放缓存数据，使用 RDD.unpersist 方法。
+
+* 指定缓存级别参考 `org.apache.spark.storage.StorageLevel` 类定义
 
 ### cache 和 persist 的区别
 其实 cache 底层实际调用的就是 persist 方法，只是缓存的级别默认是 MEMORY_ONLY，而 persist 方法可以指定其他的缓存级别。
