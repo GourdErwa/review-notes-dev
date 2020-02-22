@@ -9,8 +9,15 @@
 
 - [数据结构-链表](https://gourderwa.blog.csdn.net/article/details/104368053)
 
+- [数据结构-树、二叉树](https://gourderwa.blog.csdn.net/article/details/104438507)
+
 #### 算法
+- [算法题常见名词解释](https://gourderwa.blog.csdn.net/article/details/104438505)
+
 - [算法技巧总结](https://gourderwa.blog.csdn.net/article/details/104385883)
+
+- [如何写递归](https://gourderwa.blog.csdn.net/article/details/104438504)
+
 
 > 更多相关专栏内容汇总：
 >- [Java 核心知识-专栏文章目录汇总 ](https://gourderwa.blog.csdn.net/article/details/104020339)
