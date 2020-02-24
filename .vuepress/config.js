@@ -17,19 +17,23 @@ module.exports = {
         ['link', {
             rel: 'stylesheet',
             href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css'
-        }],
-        ['link', { // 数学公式
-            rel: "stylesheet",
-            href: "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css"
         }]
+        // ,
+        // ['link', { // 数学公式
+        //     rel: "stylesheet",
+        //     href: "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css"
+        // }]
     ],
+    //theme: '@vuepress/blog', // 博客主题 https://vuepress-theme-blog.ulivz.com/
+    // themeConfig: {
+    //     // 请参考文档来查看所有可用的选项。
+    // }
     themeConfig: {
         displayAllHeaders: false, // 当前活动页面的标题
         lastUpdated: '最后修改时间', // string | boolean
         smoothScroll: true,
         nav: myNav,
         sidebar: mySidebar,
-
         //----------------git-仓库和编辑链接---------------
         // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
         repo: 'GourdErwa/review-notes-dev',
@@ -88,7 +92,7 @@ module.exports = {
                 }
             }
         ],
-        ['vuepress-plugin-code-copy', true], // 代码复制
+       // ['vuepress-plugin-code-copy', true], // 代码复制
         'reading-progress', // 阅读进度条 https://github.com/tolking/vuepress-plugin-reading-progress
         'vuepress-plugin-baidu-autopush' // 百度站点自动推送
     ]

@@ -2,7 +2,7 @@ module.exports = [
     {
         title: "数据结构-基础",
         collapsable: false,
-        sidebarDepth: 1,
+        sidebarDepth: 0,
         children: [
             ['数据结构概述', '数据结构概述'],
             ['时间复杂度与空间复杂度', '时间复杂度与空间复杂度'],
@@ -15,11 +15,11 @@ module.exports = [
     {
         title: "算法",
         collapsable: false,
-        sidebarDepth: 1,
+        sidebarDepth: 0,
         children: [
             ['算法题常见名词解释', '算法题常见名词解释'],
-            ['算法技巧总结', '算法技巧总结'],
-            ['如何写递归', '如何写递归']
+            ['算法解题技巧总结', '算法解题技巧总结'],
+            ['如何轻而易举的写出递归函数', '如何轻而易举的写出递归函数']
         ]
     }
 ];

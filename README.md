@@ -8,8 +8,7 @@
 
 ## 内容
 - 编程语言
-    * [Java 核心知识（In review） ](/language/java-core/)
-    * [Java 谜题（In review）](/language/java-puzzle/)
+    * [Java 核心知识 ](/language/java-core/)
     * [Java 并发编程](/language/java-concurrency/)
     * [Java JVM-虚拟机](/language/java-jvm/)
     * [Scala 基础](/language/scala-basis/)
@@ -17,17 +16,11 @@
 - 技术框架
     * [Spark 基础（In review） ](/framework/spark-basis/)
     * [Flink 基础（In review） ](/framework/flink-basis/)
-    * [Redis（In review） ](/framework/redis/)
 
 - 算法设计与理论
-    * [计算机组成原理（In review） ](/algorithm/computer-theory/)
-    * [计算机网络（In review） ](/algorithm/network/)
-    * [分布式理论（In review） ](/algorithm/distributed-theory/)
     * [数据结构（In review） ](/algorithm/data-structures/)
-    * [设计模式（In review） ](/algorithm/design-patterns/)
 
 - DevOps
-    * [Git（In review） ](/devops/git/)
     * [收藏系列「:+1:」 ](/devops/dev-tools)
 
 - [面试题](/interview/)
