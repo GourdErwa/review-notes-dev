@@ -20,6 +20,9 @@ Java 核心知识专栏系列笔记，系统性学习可访问个人技术博客
 - [Java 从字节码的角度谈代码优化的假象](https://gourderwa.blog.csdn.net/article/details/104402469)
 
 #### 集合
+
+- [集合体系接口概览](https://blog.csdn.net/xiaohulunb/article/details/104502468)
+
 - [哈希碰撞实战- HashMap 原理](https://blog.csdn.net/xiaohulunb/article/details/103809321)
 
 #### 反射与动态类型

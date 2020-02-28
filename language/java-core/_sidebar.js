@@ -18,7 +18,7 @@ module.exports = [
         collapsable: false,
         sidebarDepth: 0,
         children: [
-            ['集合体系介绍', '集合体系介绍'],
+            ['集合体系接口概览', '集合体系接口概览'],
             ['哈希碰撞实战 HashMap 原理', '哈希碰撞实战 HashMap 原理']
         ]
     },

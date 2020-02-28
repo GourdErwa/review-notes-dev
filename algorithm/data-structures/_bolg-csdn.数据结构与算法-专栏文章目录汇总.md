@@ -9,7 +9,7 @@
 
 - [数据结构-链表](https://gourderwa.blog.csdn.net/article/details/104368053)
 
-- [数据结构-树、二叉树、查找树](https://gourderwa.blog.csdn.net/article/details/104438507)
+- [数据结构-树、二叉树、查找树、平衡树](https://gourderwa.blog.csdn.net/article/details/104438507)
 
 #### 算法
 - [算法题常见名词解释](https://gourderwa.blog.csdn.net/article/details/104438505)
