@@ -4,7 +4,7 @@ module.exports = [
         collapsable: false,
         sidebarDepth: 0,
         children: [
-            // ['集合体系介绍', '集合体系介绍']
+            ['Git-cheat-sheet', 'Git-cheat-sheet']
         ]
     }
 ];
