@@ -6,7 +6,7 @@ Scala 编程语言专栏系列笔记，系统性学习可访问个人复盘笔�
 ## 什么是混入
 当某个特质被用于组合类时，被称为混入。  
 * 一个类只能有一个父类，但是可以有多个混入。
-* 父类和混入可能具有相同的父类。
+* 如果一个类具有父类，并且混入的特质也具有父类，那么这个类的父类必须是混入特质的父类的子类。
 ## 示例 1
 类 D 有一个父类 B 和一个混入 C，父类 B 和混入 C 具有相同的父类 A。  
 ```scala
@@ -19,6 +19,7 @@ Scala 编程语言专栏系列笔记，系统性学习可访问个人复盘笔�
   trait C extends A {
     def loudMessage = message.toUpperCase()
   }
+  // D 具有父类 B，混入的特质 C 具有父类 A，那么 B 必须是 A的子类
   class D extends B with C
   
   val d = new D
@@ -58,4 +59,121 @@ Scala 编程语言专栏系列笔记，系统性学习可访问个人复盘笔�
   // a
   // l
   // a
+```
+## 使用匿名内部类来实现动态混入
+```scala
+  trait Animal {
+    def showName(): Unit = {
+      println("animal")
+    }
+  }
+  
+  abstract class Pet {
+    def petType()
+  }
+  
+  class Dog {}
+  
+  object Main {
+    def main(args: Array[String]): Unit = {
+      val dog = new Dog with Animal
+      dog.showName()
+  
+      val pet = new Pet with Animal {
+        override def petType(): Unit = {
+          println("宠物类型")
+        }
+      }
+      pet.showName()
+    }
+  }
+```
+## 静态混入时的构建顺序
+静态混入时先初始化父类对象然后初始化混入的特质，最后再初始化自己本身。
+```scala
+  object Main {
+    def main(args: Array[String]): Unit = {
+      abstract class A {
+        println("A")
+        val message: String
+      }
+      class B extends A {
+        println("B")
+        val message = "I'm an instance of class B"
+      }
+      trait C extends A {
+        println("C")
+        def loudMessage = message.toUpperCase()
+      }
+      class D extends B with C{
+        println("D")
+      }
+  
+      val d = new D
+      // A
+      // B
+      // C
+      // D
+    }
+  }
+```
+## 动态混入时的构建顺序以及执行顺序是怎样的
+* 创建一个动态混入对象时，先出初始化要创建的对象，然后再初始化动态混入的特质，混入的特质按照从左向右的顺序依次初始化。
+* 执行方法时，有些类似栈的结构，先混入的后执行，也就是按照混入特质从右向左的顺序执行。
+* 当执行 super 方法时，这里的父类指的是左边混入的特质，如果左边没有混入的特质了则指的是真正的父类。
+* 如果执行 super 方法时不想调用默认左边动态混入特质的方法时，可以指定父类的泛型来调用真正父类的方法 super[父类].
+```scala
+  trait Animal {
+    println("Animal")
+  
+    def showName()
+  }
+  
+  trait Pet extends Animal {
+    println("Pet")
+  
+    override def showName(): Unit = {
+      println("Pet show name")
+    }
+  }
+  
+  trait DogPet extends Pet {
+    println("DogPet")
+  
+    override def showName(): Unit = {
+      println("DogPet show name")
+      super.showName()
+    }
+  }
+  
+  trait CatPet extends Pet {
+    println("CatPet")
+  
+    override def showName(): Unit = {
+      println("CatPet show name")
+      super[Pet].showName()
+    }
+  }
+  
+  class Tom {
+  println("Tom")
+  }
+  
+  object Main {
+    def main(args: Array[String]): Unit = {
+      val tom = new Tom with DogPet with CatPet
+      tom.showName()
+      // 结果：
+      // Tom     先构建自己本身
+      // Animal  再构建 DogPet 的顶级父类
+      // Pet     再构建 DogPet 的父类
+      // DogPet  再构建 DogPet
+      // CatPet  最后构建 CatPet，因为 CatPet 的父类已经构建过了，因此不再构建
+  
+  
+      // CatPet show name  从右向左执行，先执行 CatPet 的 showName 方法
+      // DogPet show name  调用 super 时，父类是左边动态混入的特质，因此执行 DogPet 的 showName 方法
+      // Pet show name     DogPet 调用 super 方法时，应为左边不存在动态混入的特质，所以执行父类 Pet 的 showName 方法
+    }
+  }
 ```
