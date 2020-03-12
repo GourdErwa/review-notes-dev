@@ -6,13 +6,17 @@ Scala 编程语言专栏系列笔记，系统性学习可访问个人复盘笔�
 
 * 一个方法只能有一个隐式参数列表，隐式参数列表中可以定义多个隐式参数。
 
-* 在调用方法时，如果没有为隐式参数列表传入值，Scala 会为其自动匹配相应类型的隐式值。
+* 在调用方法时，如果没有为隐式参数列表传入值(不为隐式参数列表传值时不要写 ()，会被编译器认为调用方法时不传参数而报错)，Scala 会为其自动匹配相应类型的隐式值。
 
 * 隐式参数列表只能是最后一个参数列表。
 
 * Scala 在调用包含有隐式参数块的方法时，将首先查找可以直接访问的隐式定义和隐式参数。
 
 * 其次是在所有伴生对象中查找与隐式候选类型相关的有隐式标记的成员。
+
+* 隐式值的优先级高于默认值，一个隐式参数拥有默认值，但是在调用该方法时同时匹配到了隐式值，优先使用隐式值
+
+* 如果同时匹配到了两个及以上的隐式值，编译会报错
 
 ```scala
   abstract class Monoid[A] {
@@ -21,27 +25,27 @@ Scala 编程语言专栏系列笔记，系统性学习可访问个人复盘笔�
   }
   
   object ImplicitTest {
-    // 隐式参数
+    // 隐式值
     implicit val stringMonoid: Monoid[String] = new Monoid[String] {
       def add(x: String, y: String): String = x concat y
       def unit: String = ""
     }
-    // 隐式参数
+    // 隐式值
     implicit val intMonoid: Monoid[Int] = new Monoid[Int] {
       def add(x: Int, y: Int): Int = x + y
       def unit: Int = 0
     }
-    // 隐式参数 m，如果可以找到隐式 Monoid[A] 用于隐式参数 m，我们在调用 sum 方法时只需要传入 xs 参数。
+    // 隐式参数 m，如果可以找到隐式值 Monoid[A] 用于隐式参数 m，我们在调用 sum 方法时只需要传入 xs 参数。
     def sum[A](xs: List[A])(implicit m: Monoid[A]): A =
       if (xs.isEmpty) m.unit
       else m.add(xs.head, sum(xs.tail))
       
     def main(args: Array[String]): Unit = {
       // scala 会在上下文寻找隐式值
-      // 由于 List(1,2,3) 的类型为 List[Int]，并且只传入了 xs，因此会寻找 Monoid[Int] 的隐式参数
+      // 由于 List(1,2,3) 的类型为 List[Int]，并且只传入了 xs，因此会寻找 Monoid[Int] 类型的隐式值
       // intMonoid 是一个隐式定义，可以在 main 中直接访问。并且它的类型也正确，因此它会被自动传递给 sum 方法
       println(sum(List(1, 2, 3)))   // 6
-      // 由于 List("a", "b", "c") 的类型为 List[String]，并且只传入了 xs，因此会寻找 Monoid[String] 的隐式参数
+      // 由于 List("a", "b", "c") 的类型为 List[String]，并且只传入了 xs，因此会寻找 Monoid[String] 类型的隐式值
       // stringMonoid 是一个隐式定义，可以在 main 中直接访问。并且它的类型也正确，因此它会被自动传递给 sum 方法
       println(sum(List("a", "b", "c"))) // abc
     }

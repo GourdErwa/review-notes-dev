@@ -24,6 +24,7 @@ module.exports = [
             ['复合类型（with）', '复合类型（with）'],
             ['自类型（self）', '自类型（self）'],
             ['隐式参数（implicit）', '隐式参数（implicit）'],
+            ['隐式类', '隐式类'],
             ['隐式转换', '隐式转换'],
             ['多态方法', '多态方法'],
             ['注解（annotation）', '注解（annotation）'],
