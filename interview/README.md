@@ -9,3 +9,7 @@
 ## 面试题
 
 - [Java 面试题（中高级）](/interview/Java中高级面试题.md)
+
+## 推荐
+
+- [大数据面经-BigDataIE](https://github.com/WadeStack/BigDataIE)
