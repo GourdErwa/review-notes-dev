@@ -1,4 +1,5 @@
 /.idea/
+*.iml
 /.vuepress/dist/
 
 ##Project exclude paths
