@@ -1,3 +1,4 @@
+> 专栏原创出处：[github-源笔记文件 ](https://github.com/GourdErwa/review-notes/tree/master/language/java-puzzle) ，欢迎 Star，转载请附上原文出处链接和本声明。
 
 [toc]
 ## 生成一个新的 SSH Key
@@ -5,11 +6,11 @@
 $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 # 执行命令生成 ssh-key，需要指定相应的邮箱
 
-> Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [如果不更改文件名直接回车]
+> Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [如果不更改文件名直接回车 ]
 # 推荐不使用默认文件名 id_rsa ，按实际场景重新命名文件名称，比如：/Users/you/.ssh/id_rsa_github_my
 
-> Enter passphrase (empty for no passphrase): [输入密码，回车]
-> Enter same passphrase again: [再次输入密码，回车]
+> Enter passphrase (empty for no passphrase): [输入密码，回车 ]
+> Enter same passphrase again: [再次输入密码，回车 ]
 
 $ ll /Users/you/.ssh
 # 可以看到刚刚生成的 ssh-key id_rsa_github_my 文件

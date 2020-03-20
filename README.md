@@ -21,6 +21,7 @@
     * [数据结构（In review） ](/algorithm/data-structures/)
 
 - DevOps
+    * [Git](/devops/git)
     * [收藏系列「:+1:」 ](/devops/dev-tools)
 
 - [面试题](/interview/)
