@@ -85,8 +85,48 @@ ababab |ca
 </div>
 
 **构建部分匹配表-PMT**
-???
- 
+```java
+public int[] next(String str) {
+    int len = str.length();
+    int[] result = new int[len];
+    char[] strArr = str.toCharArray();
+    result[0] = -1;
+    int i = 0, j = -1;
+
+    while (i < len - 1) {
+        if (j == -1 || strArr[i] == strArr[j]) {
+            ++i;
+            ++j;
+            result[i] = j;
+        } else
+            j = result[j];
+    }
+    return result;
+}
+```
+**KMP 算法使用**
+```java
+public static int KMP(String a, String b) {
+    int[] next = next(b);
+    char[] charsA = a.toCharArray();
+    char[] charsB = b.toCharArray();
+    int i = 0;
+    int j = 0;
+    while (i < a.length() && j < b.length()) {
+        if (j == -1 || charsA[i] == charsB[j]) {
+            i++;
+            j++;
+        } else {
+            j = next[j];
+        }
+    }
+    if (j == b.length())
+        return i - j;
+    else {
+        return -1;
+    }
+}
+```
 ## 参考
 - [如何更好地理解和掌握 KMP 算法?](https://www.zhihu.com/question/21923021)
 
